@@ -5,9 +5,9 @@ Hello, and welcome to the first chapter of this book I am currently reading. Thi
 ## Progress Tracker
 
 ### Days 1-25
-- [x] Day 1 [Introduction to Deep Learning](https://d2l.ai/chapter_introduction/index.html)
-- [ ] Day 2
-- [ ] Day 3
+- [x] Day 1 [Introduction to Deep Learning](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter1-Introduction.md)
+- [x] Day 2 [Deep_Learning_IIITDMJ](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Deep_Learning_IIITDMJ.md) | [Chapter2-Preliminaries](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter2-Preliminaries.md)
+- [x] Day 3 [Deep_Learning_IIITDMJ](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Deep_Learning_IIITDMJ.md) | [Chapter-2-Preliminaries](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter2-Preliminaries.md)
 - [ ] Day 4
 - [ ] Day 5
 - [ ] Day 6
