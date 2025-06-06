@@ -9,7 +9,7 @@ Hello, and welcome to the first chapter of this book I am currently reading. Thi
 - [x] Day 2 [Deep_Learning_IIITDMJ](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Deep_Learning_IIITDMJ.md) | [Chapter2-Preliminaries](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter2-Preliminaries.md)
 - [x] Day 3 [Deep_Learning_IIITDMJ](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Deep_Learning_IIITDMJ.md) | [Chapter-2-Preliminaries](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter2-Preliminaries.md)
 - [x] Day 4 [Deep_Learning_IIITDMJ](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Deep_Learning_IIITDMJ.md)
-- [ ] Day 5
+- [x] Day 5 [Deep_Learning_IIITDMJ](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Deep_Learning_IIITDMJ.md) | [Chapter-2-Preliminaries](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter2-Preliminaries.md)
 - [ ] Day 6
 - [ ] Day 7
 - [ ] Day 8

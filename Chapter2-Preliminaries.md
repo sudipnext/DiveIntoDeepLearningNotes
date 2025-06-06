@@ -1,3 +1,6 @@
+Jupyter Notebook: [Chapter2.ipynb](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter2.ipynb)
+
+
 ## 2.1 Data Manipulation
 In order to get anything done in machine learning, deep learning or anything we need to learn the art of data manipulation. This includes reading data from files, manipulating data in memory, and writing data back to files. The most common libraries for data manipulation in Python are NumPy and Pandas.
 
@@ -66,12 +69,53 @@ reshaped_tensor_auto = tensor_range.reshape(-1, 5)  # Automatically infers the f
 tensor([[0, 1, 2, 3, 4],
         [5, 6, 7, 8, 9]])
 ```
-More on this here [Chapter2.ipynb](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter2.ipynb)
 
 
 ## 2.2 Data Preprocessing
+> Data Preprocessing is the process of transforming raw data into a format that is suitable for analysis. This includes cleaning, transforming, and normalizing the data.
+### 2.2.1 Reading the Dataset
+We can read datasets from various sources such as CSV files, Excel files, SQL databases, and more. The most common library for reading datasets in Python is Pandas.
 
+Let's imagine we have dataset like this table:
+| Feature1 | Feature2 | Feature3 | Target |
+|----------|----------|----------|--------|
+| 1.0      | 2.0      | 3.0      | 0      |
+| 4.0      | 5.0      | 6.0      | 1      |
+We can read this dataset using Pandas as follows:
 
+```python
+import pandas as pd
+# Reading a CSV file
+df = pd.read_csv('data.csv')
+# Reading an Excel file
+df = pd.read_excel('data.xlsx')
+```
+### 2.2.2 Data Preparation
+Data preparation is the process of cleaning and transforming the data to make it suitable for analysis. This includes handling missing values, removing duplicates, and transforming categorical variables into numerical variables.
+
+```python
+inputs, targets = df.iloc[:, :-1], df.iloc[:, -1]  # Splitting the dataset into inputs and targets
+# removing missing values
+inputs = inputs.dropna()  # Dropping rows with missing values in inputs
+targets = targets.dropna()  # Dropping rows with missing values in targets
+# removing duplicates
+inputs = inputs.drop_duplicates()  # Dropping duplicate rows in inputs
+targets = targets.drop_duplicates()  # Dropping duplicate rows in targets
+# transforming categorical variables into numerical variables
+inputs = pd.get_dummies(inputs)  # One-hot encoding categorical variables in inputs
+```
+### 2.2.3 Conversion to the Tensor Format
+After preparing the data, we need to convert it into a format that can be used by PyTorch. This involves converting the Pandas DataFrame into a PyTorch tensor.
+
+```python
+import torch
+# Converting the inputs and targets to PyTorch tensors
+inputs_tensor = torch.tensor(inputs.values, dtype=torch.float32)  # Converting inputs to a tensor
+targets_tensor = torch.tensor(targets.values, dtype=torch.float32)  # Converting targets to a tensor
+```
+### Exercises
+1. Loading the UCI ML repository Abalone dataset and inspecting the properties of the dataset. What fraction of the data has missing values? What fraction of the variables are numerical, categorical, or text?
+> Only one variable is categorical, which is the `Sex` variable. The rest are numerical variables. The dataset has no missing values.
 
 ## 2.3 Linear Algebra
 

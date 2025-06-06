@@ -181,7 +181,7 @@ Where:
 ## Rosenblatt's Perceptron
 > The perceptron was introduced by Frank Rosenblatt in 1958. It is a simple model that can be used to classify linearly separable data. The perceptron learns the weights and bias by minimizing the error between the predicted output and the true output.  
 
-![alt text](image.png)  
+![alt text](images/Perceptron.png)  
 Image source: [Rosenblatt's Perceptron](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40aaronbrennan.brennan%2Fthe-perceptrons-beginning-rosenblatt-and-minsky-papert-1813def0817b&psig=AOvVaw0xmcABfuPQW-oZ-dJ-VuX4&ust=1749224390595000&source=images&cd=vfe&opi=89978449&ved=0CBgQjhxqFwoTCNil_eTO2o0DFQAAAAAdAAAAABAL)
 
 > The output of a perceptron can be represented as:  
@@ -267,7 +267,7 @@ W^{(t+1)} = W^{(t)} - \eta \cdot \nabla E
 ## Multi Layer Perceptron (MLP)
 > A Multi-Layer Perceptron (MLP) is a type of neural network that consists of multiple layers of neurons, including an input layer, one or more hidden layers, and an output layer. Each neuron in a layer is connected to every neuron in the next layer, forming a fully connected network.
 
-![MLP Diagram](image-1.png)
+![MLP Diagram](images/MLP.png)
 
 Image Reference[Datacamp](https://www.datacamp.com/tutorial/multilayer-perceptrons-in-machine-learning)
 
