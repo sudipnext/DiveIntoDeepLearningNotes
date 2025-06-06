@@ -278,11 +278,11 @@ Image Reference[Datacamp](https://www.datacamp.com/tutorial/multilayer-perceptro
 ```
 
 Where:
-- \( W^{(i)} \) is the weight matrix for layer \( i \),
-- \( b^{(i)} \) is the bias vector for layer \( i \),
-- \( \text{activation\_function} \) is a non-linear activation function applied at each layer,
-- \( L \) is the number of layers in the MLP,
-- \( x \) is the input vector.
+-  W^(i) is the weight matrix for layer i ,
+- b^(i) is the bias vector for layer i ,
+- activation_function is a non-linear activation function applied at each layer,
+- L is the number of layers in the MLP,
+- x is the input vector.
 
 ## Activation Functions
 > Activation functions introduce non-linearity into the model, allowing the MLP to learn complex relationships in the data. Common activation functions include:
@@ -402,3 +402,397 @@ This elegant relationship shows that scaling and shifting the sigmoid function y
 |  1 |  1 |      1       |     0     |
 
 ### XOR-2 from basic Logic Gates
+> The 3 gates `AND`, `OR`, `NOT` can be used to make any complex gates. To make a XOR Gate we have XOR as
+
+x2 xor x1 = (x2 and not x1) or (not x2 and x1)
+
+Now for this we need to first make a Not Gate
+
+### NOT GATE
+
+![Not_Gate](images/NotGate.png)
+
+Let's make a truth table for the Not Gate to verify the output
+
+x1 | not x1
+|----|--------|
+|  0 |   1    |   
+|  1 |   0    |
+
+So, When we use the above values like weight -20 as w and the bias as +10 then we got the output as when 
+
+>case, x1=0
+
+```math
+y = w * x1 + b = -20 * 0 + 10 = 10
+```
+
+If we pass it through some activation function like sigmoid then we get the output as
+
+
+
+
+```math
+\text{output} = \sigma(y) = \frac{1}{1 + e^{-y}} = \frac{1}{1 + e^{-10}} \approx 1
+```
+
+
+>case, x1=1
+
+```math
+y = w * x1 + b = -20 * 1 + 10 = -10
+```
+
+If we pass it through some activation function like sigmoid then we get the output as
+
+
+
+```math
+\text{output} = \sigma(y) = \frac{1}{1 + e^{-y}} = \frac{1}{1 + e^{10}} \approx 0
+```
+
+### AND GATE
+![And_Gate](images/AndGate.png)
+Let's make a truth table for the AND Gate to verify the output
+x1 | x2 | x1 and x2
+|----|----|-----------|
+|  0 |  0 |     0     | 
+|  0 |  1 |     0     |
+|  1 |  0 |     0     |
+|  1 |  1 |     1     |
+
+So if we use the x1 weight i.e w1 =20 and x2 weight i.e w2 = 20 and bias as -30 then we got the output as when
+>case, x1=0, x2=0
+
+```math
+y = w1 * x1 + w2 * x2 + b = 20 * 0 + 20 * 0 - 30 = -30
+```
+Passing through Sigmoid
+```math
+\text{output} = \sigma(y) = \frac{1}{1 + e^{-y}} = \frac{1}{1 + e^{30}} \approx 0
+```
+>case, x1=0, x2=1
+
+```math
+y = w1 * x1 + w2 * x2 + b = 20 * 0 + 20 * 1 - 30 = -10
+```
+Passing through Sigmoid
+
+```math
+\text{output} = \sigma(y) = \frac{1}{1 + e^{-y}} = \frac{1}{1 + e^{10}} \approx 0
+```
+>case, x1=1, x2=0
+
+```math
+y = w1 * x1 + w2 * x2 + b = 20 * 1 + 20 * 0 - 30 = -10
+```   
+Passing through Sigmoid
+
+```math
+\text{output} = \sigma(y) = \frac{1}{1 + e^{-y}} = \frac{1}{1 + e^{10}} \approx 0
+```
+>case, x1=1, x2=1
+
+```math
+y = w1 * x1 + w2 * x2 + b = 20 * 1 + 20 * 1 - 30 = 10
+```
+Passing through Sigmoid
+
+```math
+\text{output} = \sigma(y) = \frac{1}{1 + e^{-y}} = \frac{1}{1 + e^{-10}} \approx 1
+```
+
+### OR GATE
+![Or_Gate](images/OrGate.png)
+Let's make a truth table for the OR Gate to verify the output
+x1 | x2 | x1 or x2
+|----|----|----------|
+|  0 |  0 |    0     |
+|  0 |  1 |    1     |
+|  1 |  0 |    1     |
+|  1 |  1 |    1     |
+
+So if we use the x1 weight i.e w1 =20 and x2 weight i.e w2 = 20 and bias as -10 then we got the output as when
+
+>case, x1=0, x2=0
+
+```math
+y = w1 * x1 + w2 * x2 + b = 20 * 0 + 20 * 0 - 10 = -10
+```
+Passing through Sigmoid
+
+```math
+\text{output} = \sigma(y) = \frac{1}{1 + e^{-y}} = \frac{1}{1 + e^{10}} \approx 0
+```
+>case, x1=0, x2=1
+
+```math
+y = w1 * x1 + w2 * x2 + b = 20 * 0 + 20 * 1 - 10 = 10
+```
+Passing through Sigmoid
+
+```math
+\text{output} = \sigma(y) = \frac{1}{1 + e^{-y}} = \frac{1}{1 + e^{-10}} \approx 1
+```
+>case, x1=1, x2=0
+
+```math
+y = w1 * x1 + w2 * x2 + b = 20 * 1 + 20 * 0 - 10 = 10
+```
+Passing through Sigmoid
+
+```math
+\text{output} = \sigma(y) = \frac{1}{1 + e^{-y}} = \frac{1}{1 + e^{-10}} \approx 1
+```
+>case, x1=1, x2=1
+
+```math
+y = w1 * x1 + w2 * x2 + b = 20 * 1 + 20 * 1 - 10 = 30
+```
+Passing through Sigmoid
+
+```math 
+\text{output} = \sigma(y) = \frac{1}{1 + e^{-y}} = \frac{1}{1 + e^{-30}} \approx 1
+```
+
+### Reconstructing the Whole neural Network Now
+
+![Final XOR Network](images/XOR_NW.png)
+
+We can initialize the weights and biases as follows:
+
+w1 = 20, w2 = 20, w3 = -30, w4 = 20, w5 = 20, b1 = -10, b2 = -10, b3 = -30
+
+XOR Truth Table with Weights and Biases
+| x1 | x2 | z1 = x1 AND NOT x2 | z2 = NOT x1 AND x2 | y = z1 OR z2 |
+|----|----|--------------------|-------------------|-------------|
+|  0 |  0 |         0          |         0         |      0      |
+|  0 |  1 |         0          |         1         |      1      |
+|  1 |  0 |         1          |         0         |      1      |
+|  1 |  1 |         0          |         0         |      0      |
+
+## Factorization: Probability | Differential Calculus
+
+### The Bayes Rule is Symmetrical
+> The Bayes rule is symmetrical, meaning that the order of the conditional probabilities does not matter. It can be expressed as:
+
+```math
+P(A|B) * P(B) = P(B|A) * P(A)
+```
+
+Where:
+- \( P(A|B) \) is the conditional probability of event \( A \) given event \( B \),
+- \( P(B|A) \) is the conditional probability of event \( B \) given event \( A \),
+- \( P(A) \) is the prior probability of event \( A \),
+- \( P(B) \) is the prior probability of event \( B \).
+
+From the Bayes rule, we can derive the following relationship:
+
+```math
+P(A|B) = \frac{P(B|A) * P(A)}{P(B)}
+```
+Where P(A) is the initial or prior probability of event A,
+P(A/B) is the updated or Posterior probability of event A given event B,
+
+### The Taylor Series
+> The Taylor series is a mathematical representation of a function as an infinite sum of terms, calculated from the values of its derivatives at a single point. It is used to approximate functions that are difficult to compute directly. The Taylor series for a function \( f(x) \) around a point \( a \) is given by:
+
+```math
+f(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \frac{f'''(a)}{3!}(x - a)^3 + \ldots
+```
+
+Where:
+- \( f(a) \) is the value of the function at point \( a \),
+- \( f'(a) \) is the first derivative of the function at point \( a \),
+- \( f''(a) \) is the second derivative of the function at point \( a \),
+- \( f'''(a) \) is the third derivative of the function at point \( a \),
+- \( n! \) is the factorial of \( n \).
+
+### Jacobian Matrix
+> The Jacobian matrix is a matrix of all first-order partial derivatives of a vector-valued function. It describes how the function changes with respect to its inputs. 
+
+```math
+J(f) = \begin{bmatrix}
+\frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \ldots & \frac{\partial f_1}{\partial x_n} \\
+\frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \ldots & \frac{\partial f_2}{\partial x_n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{\partial f_m}{\partial x_1} & \frac{\partial f_m}{\partial x_2} & \ldots & \frac{\partial f_m}{\partial x_n}
+\end{bmatrix}
+```
+
+Where:
+- \( f_i \) is the \( i \)-th component of the function \( f \),
+- \( x_j \) is the \( j \)-th input variable.
+
+> Physical Significance:
+> The Jacobian matrix is used to analyze the stability and behavior of dynamical systems. It provides information about how small changes in the inputs affect the outputs of the system. The eigenvalues of the Jacobian matrix can be used to determine the stability of equilibrium points in the system.
+
+### Difference Equation
+> A difference equation is a mathematical equation that relates a function with its discrete values at different points. It is used to model systems that change over time in discrete steps. The general form of a difference equation is:
+
+```math
+f(n) = a_1 f(n-1) + a_2 f(n-2) + \ldots + a_k f(n-k) + b_0 + b_1 g(n-1) + b_2 g(n-2) + \ldots + b_m g(n-m)
+```
+
+Where:
+- f(n) is the value of the function at step n,
+- a_1, a_2, a_k are coefficients for the previous values of the function,
+- b_0, b_1, \ldots, b_m are coefficients for the input function g(n) ,
+- g(n) is an input function that affects the system at step n.
+
+### The Chain Rule
+> The chain rule is a fundamental concept in calculus that describes how to compute the derivative of a composite function. If you have two functions \( f \) and \( g \), the chain rule states that:
+
+```math
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+```
+
+Where:
+- f(g(x)) is the derivative of  f  evaluated at g(x) ,
+- g'(x) is the derivative of  g with respect to x .
+
+## BackPropagation
+> Backpropagation is an algorithm used to train neural networks by minimizing the error between the predicted output and the true output. It involves computing the gradient of the loss function with respect to the weights and biases of the network, and then updating the weights and biases using gradient descent.
+### Backpropagation Algorithm
+```plaintext
+1. Initialize weights and biases to small random values.
+2. For each training example (x, y):
+   a. Forward pass:
+      i. Compute the output of the network using the current weights and biases.
+      ii. Calculate the loss (error) between the predicted output and the true output.
+   b. Backward pass:
+      i. Compute the gradient of the loss with respect to the output layer.
+      ii. Propagate the gradient backward through the network to compute gradients for all layers.
+   c. Update weights and biases:
+      i. Use the computed gradients to update the weights and biases using gradient descent.
+3. Repeat steps 2 until convergence (i.e., when the weights and biases do not change significantly).
+```
+### Backpropagation Example
+```plaintext
+1. Initialize weights and biases:
+   w1 = 0.5, w2 = -0.5, b = 0.1
+2. Forward pass:
+   a. Compute the output:
+      output = activation_function(w1 * x1 + w2 * x2 + b)
+   b. Calculate the loss:
+      loss = (output - y)^2
+3. Backward pass:
+   a. Compute the gradient of the loss with respect to the output:
+      dL/dout = 2 * (output - y) * activation_function_derivative(output)
+   b. Propagate the gradient backward through the network to compute gradients for all layers.
+   c. Update weights and biases:
+      i. Use the computed gradients to update the weights and biases using gradient descent.
+   w1 = w1 - learning_rate * dL/dw1
+   w2 = w2 - learning_rate * dL/dw2
+   b = b - learning_rate * dL/db
+4. Repeat steps 2 until convergence.
+```
+
+## Day2 Python For Deep Learning
+
+### min, max, argmin, argmax
+Let's understand the concepts of `min`, `max`, `argmin`, and `argmax` using Python.
+
+```python
+import numpy as np
+# Create a sample array
+arr = np.array([3, 1, 4, 1, 5, 9, 2, 6, 5])
+# Find the minimum value
+min_value = np.min(arr)
+# Find the maximum value
+max_value = np.max(arr)
+# Find the index of the minimum value
+argmin_index = np.argmin(arr)
+# Find the index of the maximum value
+argmax_index = np.argmax(arr)
+# Print the results
+print("Minimum value:", min_value)
+print("Maximum value:", max_value)
+print("Index of minimum value:", argmin_index)
+print("Index of maximum value:", argmax_index)
+
+```
+#### Output:
+```plaintext
+Minimum value: 1
+Maximum value: 9
+Index of minimum value: 1
+Index of maximum value: 5
+
+```
+Formulae of Argmin and Argmax
+
+```math
+z = \underset{x}{\operatorname{arg}}  min f(x)
+```
+
+```math
+w = \underset{x}{\operatorname{arg}}  max f(x)
+```
+### Application of Argmin and Argmax in Deep Learning
+> Let's say we have a task in NN to classify the image of a sign board into one of the classes: `STOP`, `GO`, `YIELD`. The output layer of the neural network will have three neurons, each representing one of these classes. The output of the network will be a vector of probabilities for each class.
+
+```python
+import numpy as np
+
+# Sample output probabilities from the neural network
+output_probs = np.array([0.7, 0.2, 0.1])
+
+# Find the predicted class using argmax
+predicted_class = np.argmax(output_probs)
+
+# Print the predicted class
+print("Predicted class:", predicted_class)
+```
+#### Output:
+```plaintext
+Predicted class: 0
+```
+> In this example, the `argmax` function is used to find the index of the maximum value in the output probabilities, which corresponds to the predicted class. In this case, the predicted class is `0`, which could represent the `STOP` sign.
+
+## Mean and Variance
+
+### Mean
+> The mean is the average of a set of values. It is calculated by summing all the values and dividing by the number of values. The mean is a measure of central tendency and provides an indication of the typical value in a dataset.
+
+```python
+import numpy as np
+# Sample data
+data = np.array([1, 2, 3, 4, 5])
+
+# Calculate the mean
+mean = np.mean(data)
+
+# Print the mean
+print("Mean:", mean)
+```
+#### Output:
+```plaintext
+Mean: 3.0
+```
+> Mean gives the central tendency of the data, which is useful for understanding the overall distribution of values.
+
+Formulae
+```math
+\mu = \frac{1}{N} \sum_{i=1}^{N} x_i
+```
+Where,
+μ is the mean,
+N is the number of values,
+xi is the i-th value in the dataset.
+
+### Concept of Dispersion
+> Dispersion refers to the spread or variability of a set of values. It provides insights into how much the values deviate from the mean. Common measures of dispersion include variance and standard deviation.
+### Variance
+> Variance is a measure of how much the values in a dataset deviate from the mean. It is calculated by taking the average of the squared differences between each value and the mean. Variance provides an indication of the spread of the data.
+
+Formulae
+```math 
+\sigma^2 = \frac{1}{1-N} \sum_{i=1}^{N} (x_i - \mu)^2
+```
+Where:
+- σ is the variance,
+- N is the number of values,
+- x_i is the i-th value in the dataset,
+- μ is the mean of the dataset.
+
