@@ -5,12 +5,17 @@ Hello, I am currently working on a comprehensive set of notes for the "Dive into
 ## Progress Tracker
 
 ### Days 1-25
-- [x] Day 1 [Introduction to Deep Learning](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter1-Introduction.md)
-- [x] Day 2 [Deep_Learning_IIITDMJ](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Deep_Learning_IIITDMJ.md) | [Chapter2-Preliminaries](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter2-Preliminaries.md)
-- [x] Day 3 [Deep_Learning_IIITDMJ](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Deep_Learning_IIITDMJ.md) | [Chapter-2-Preliminaries](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter2-Preliminaries.md)
-- [x] Day 4 [Deep_Learning_IIITDMJ](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Deep_Learning_IIITDMJ.md)
-- [x] Day 5 [Deep_Learning_IIITDMJ](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Deep_Learning_IIITDMJ.md) | [Chapter-2-Preliminaries](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/Chapter2-Preliminaries.md)
-- [ ] Day 6
+- [x] Day 1 [Introduction to Deep Learning](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/book_resources/Chapter1-Introduction.md)
+
+- [x] Day 2 [Day1:Introduction](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/IITDMJ/Day1:Introduction.ipynb) | [Day1:Pratice](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/IITDMJ/Day1:Introduction.md)
+
+- [x] Day 3 [Day2:Mathematics_for_deep_learning_p1.md](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/IITDMJ/Day2:Mathematics_for_deep_learning_p1.md) | [Day2:Mathematics_for_deep_learning_p2.md](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/IITDMJ/Day2:Mathematics_for_deep_learning_p2.md) | [Day2:Mathematics_for_deep_learning.ipynb](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/IITDMJ/Day2:Mathematics_for_deep_learning.ipynb)
+
+- [x] Day 4 [Chapter2-Preliminaries.md](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/book_resources/Chapter2-Preliminaries.md)
+
+- [x] Day 5 [Chapter2.ipynb](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/book_resources/Chapter2.ipynb)
+
+- [x] Day 6 [Day3:Building_a_simple_neural_network.ipynb](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/IITDMJ/Day3:Building_a_simple_neural_network.ipynb)
 - [ ] Day 7
 - [ ] Day 8
 - [ ] Day 9
