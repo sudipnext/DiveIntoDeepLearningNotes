@@ -1,6 +1,6 @@
 # DiveIntoDeepLearningNotes
 
-Hello, and welcome to the first chapter of this book I am currently reading. This is a quick summary of the first chapter of the book "Dive into Deep Learning" (d2l.ai). These notes reflect my point of view and understanding of the material. I hope you find them helpful, and if you have any suggestions or comments, please feel free to reach out to me.
+Hello, I am currently working on a comprehensive set of notes for the "Dive into Deep Learning" course. This repository is structured to help you follow along with the course material, providing detailed explanations and code examples.
 
 ## Progress Tracker
 
