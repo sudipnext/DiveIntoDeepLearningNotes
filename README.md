@@ -16,8 +16,11 @@ Hello, I am currently working on a comprehensive set of notes for the "Dive into
 - [x] Day 5 [Chapter2.ipynb](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/book_resources/Chapter2.ipynb)
 
 - [x] Day 6 [Day3:Building_a_simple_neural_network.ipynb](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/IITDMJ/Day3:Building_a_simple_neural_network.ipynb)
-- [ ] Day 7
-- [ ] Day 8
+
+Continued after the long break becuse of my appendix surgery. I am now resuming my studies.
+
+- [x] Day 7 [Day4:Optimizing Neural_Networks.ipynb](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/IITDMJ/Day4:Optimizing_neural_networks.ipynb)
+- [ ] Day 8 
 - [ ] Day 9
 - [ ] Day 10
 - [ ] Day 11
