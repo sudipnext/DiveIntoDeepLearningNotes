@@ -20,7 +20,7 @@ Hello, I am currently working on a comprehensive set of notes for the "Dive into
 Continued after the long break becuse of my appendix surgery. I am now resuming my studies.
 
 - [x] Day 7 [Day4:Optimizing Neural_Networks.ipynb](https://github.com/sudipnext/DiveIntoDeepLearningNotes/blob/main/IITDMJ/Day4:Optimizing_neural_networks.ipynb)
-- [ ] Day 8 
+- [x] Day 8 [Day5: CNN.md]
 - [ ] Day 9
 - [ ] Day 10
 - [ ] Day 11
